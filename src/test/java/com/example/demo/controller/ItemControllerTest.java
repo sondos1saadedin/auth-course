@@ -42,7 +42,7 @@ public class ItemControllerTest {
         Item responseItem = response.getBody();
 
         assert responseItem != null;
-        assertEquals(BigDecimal.valueOf(156.78), responseItem.getPrice());
+        assertEquals(BigDecimal.valueOf(150.00), responseItem.getPrice());
         assertEquals("A B C", responseItem.getName());
         assertEquals("ABCD", responseItem.getDescription());
     }
