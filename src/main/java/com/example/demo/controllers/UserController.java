@@ -57,7 +57,7 @@ public class UserController {
 		// Add user authentication
 		if (createUserRequest.getPassword().length() < 7 ||
 				!createUserRequest.getPassword().equals(createUserRequest.getConfirmPassword())) {
-			log.error("Error with user password. Cannot create user " + createUserRequest.getUsername());
+			log.error("Error with user's password. couldn't create user " + createUserRequest.getUsername());
 			return ResponseEntity.badRequest().build();
 		}
 		user.setPassword(bCryptPasswordEncoder.encode(createUserRequest.getPassword()));
